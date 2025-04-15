@@ -1,0 +1,282 @@
+/* 
+   GiveGyan Website - Simple Styles
+   A minimalistic design based on markdown structure
+*/
+
+/* Base Styles and Variables */
+:root {
+    --primary-color: #f5f5f5;
+    --secondary-color: #e0e0e0;
+    --accent-color: #333333;
+    --text-color: #212121;
+    --background-color: #ffffff;
+    --highlight-color: #4a90e2;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px 0;
+    font-weight: 500;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--highlight-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+/* Navigation */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+/* Introduction */
+.intro {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.one-liner {
+    font-size: 1.8rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--accent-color);
+}
+
+/* Portfolio Section */
+.portfolio-intro {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.companies-section {
+    margin-top: 30px;
+}
+
+.companies-list {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.companies-list p {
+    margin-bottom: 0;
+}
+
+/* Apps Section */
+.apps-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.apps-list li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.apps-list a {
+    margin-right: 10px;
+}
+
+/* Contact Section */
+.contact-email {
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    background-color: var(--primary-color);
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--highlight-color);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: var(--shadow);
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+    
+    .one-liner {
+        font-size: 1.5rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 40px 0;
+    }
+    
+    .one-liner {
+        font-size: 1.3rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+}
