@@ -20,11 +20,77 @@
             border-top: 1px solid #ccc;
             margin: 20px 0;
         }
+        .headers {
+            margin-bottom: 20px;
+            display: none;
+        }
+        .headers ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .headers li {
+            margin-bottom: 10px;
+        }
+        .headers a {
+            text-decoration: none;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section b {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .wip {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <h1><b>Work</b></h1>
-    <p>Coming soon...</p>
+    <p class="wip">WIP</p>
+    
+    <div class="headers">
+        <ul>
+            <li><a href="#hiring">Hiring</a></li>
+            <li><a href="#performance">Performance</a></li>
+            <li><a href="#firing">Firing</a></li>
+            <li><a href="#information">Information</a></li>
+            <li><a href="#leading">Leading a team</a></li>
+        </ul>
+    </div>
+
+    <hr>
+    
+    <div class="content">
+        <div id="hiring" class="section">
+            <b>Hiring</b>
+            <p>Hire the best</p>
+        </div>
+
+        <div id="performance" class="section">
+            <b>Performance</b>
+            <p>Ignorance, Incompetence, Indifference, Malice</p>
+        </div>
+
+        <div id="firing" class="section">
+            <b>Firing</b>
+            <p>Do it quick, and make the person feel good about leaving, they are probably unhappy too</p>
+        </div>
+
+        <div id="information" class="section">
+            <b>Information</b>
+            <p>Is the life blood of the org, if you are hiring people for their brains</p>
+        </div>
+
+        <div id="leading" class="section">
+            <b>Leading a team</b>
+            <p>Like Curling</p>
+        </div>
+    </div>
+
     <hr>
     <p><a href="index.html">← Back to GiveGyan</a></p>
 </body>
